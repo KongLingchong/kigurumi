@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>第 2 节：搞到 Kigurumi - Kigurumi 不完全手册</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="个记录 Kigurumi 知识、经验、资源的手册，这里有一些关于 Kigurumi 的基础知识、自制经验、活跃玩家、工坊店家、活动等等。致力于成为能覆盖到 Kigurumi 爱好者 play 的全生命周期手册">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Kigurumi 不完全手册</li><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> 👏 欢迎来到《Kigurumi 不完全手册》</a></li><li class="chapter-item expanded affix "><li class="part-title">入门</li><li class="chapter-item expanded "><a href="../01_HelloKigurumi/index.html"><strong aria-hidden="true">2.</strong> 第 1 节：Hello Kigurumi</a></li><li class="chapter-item expanded "><a href="../02_GetKigurumi/index.html" class="active"><strong aria-hidden="true">3.</strong> 第 2 节：搞到 Kigurumi</a></li><li class="chapter-item expanded "><a href="../03_StoreChallenge/index.html"><strong aria-hidden="true">4.</strong> 第 3 节：与店家撕逼</a></li><li class="chapter-item expanded affix "><li class="part-title">生态</li><li class="chapter-item expanded "><a href="../creator-workshop.html"><strong aria-hidden="true">5.</strong> 🏠 工坊与店家</a></li><li class="chapter-item expanded "><a href="../dalao.html"><strong aria-hidden="true">6.</strong> 🐯 活跃玩家</a></li><li class="chapter-item expanded affix "><li class="part-title">自制 Kigurumi</li><li class="chapter-item expanded "><a href="../open_source_model.html"><strong aria-hidden="true">7.</strong> 😋 开源/免费模型</a></li><li class="chapter-item expanded "><a href="../DIY/index.html"><strong aria-hidden="true">8.</strong> 🛠 自制篇</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../DIY/Tips-for-FDM.html"><strong aria-hidden="true">8.1.</strong> 通过 FDM 制作头壳的小技巧</a></li><li class="chapter-item expanded "><a href="../DIY/Tips-for-made-by-pmx-vrm.html"><strong aria-hidden="true">8.2.</strong>  MMD(PMX)/VRM 制作头壳 (blender)</a></li><li class="chapter-item expanded "><a href="../DIY/Tips-for-painting.html"><strong aria-hidden="true">8.3.</strong> 自喷漆</a></li><li class="chapter-item expanded "><a href="../DIY/wigs-ref.html"><strong aria-hidden="true">8.4.</strong> 假发造型（参考资料）</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">活动</li><li class="chapter-item expanded "><a href="../groups.html"><strong aria-hidden="true">9.</strong> 群组社群</a></li><li class="chapter-item expanded affix "><li class="part-title">曾经的内容</li><li class="chapter-item expanded "><a href="../get-start.html"><strong aria-hidden="true">10.</strong> ⚡ 快速入门 Kigurumi</a></li><li class="chapter-item expanded "><a href="../after-getting-kig.html"><strong aria-hidden="true">11.</strong> 📦 收到 Kigurumi 后</a></li><li class="chapter-item expanded "><a href="../old_content/index.html"><strong aria-hidden="true">12.</strong> AWESOME KIGURUMI!!</a></li><li class="chapter-item expanded "><a href="../old_content/SHOP.html"><strong aria-hidden="true">13.</strong> 在可以采购物品的店铺（大陆）</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Kigurumi 不完全手册</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="搞到-kigurumi"><a class="header" href="#搞到-kigurumi">搞到 Kigurumi</a></h1>
+<blockquote>
+<p>本节仅浅显的介绍获取方式，具体的操作流程、注意事项、细节等内容将在后续章节中详细介绍。</p>
+</blockquote>
+<p>得益于制造业的发展，在这个年代拥有 KIGURUMI 不再是困难，越来越多的精致、可爱、性价比高的 Kigurumi 产品出现在市面上，满足不同客户、不同场景下的需求。获取 Kigurumi 产品的方式主要有以下的几种：</p>
+<ul>
+<li>找到专业的 Kigurumi 的工房、道具工作室定制；</li>
+<li>DIY
+<ul>
+<li>部分 DIY 、部分委托假发造型、采购半成品、组件完成；</li>
+<li>完全 DIY 制作：从 3D 设计、增材、假发拼接、喷漆等全部自己完成；</li>
+</ul>
+</li>
+<li>通过二手交易、玩家转让等方式获取，或二手交易后<strong>改造成自己喜欢的角色</strong>；</li>
+</ul>
+<p>在一般情况下，Kigurumi 的预算参考区间如下所示：（未涵盖时间成本）</p>
+<ul>
+<li>专业工坊定制：<strong>¥ 3000 - ¥5000 及以上</strong>；</li>
+<li>DIY 部分委托：<strong>¥ 2000 - ¥ 3000</strong>；</li>
+<li>二手交易：<strong>¥ 2000 不等</strong>；</li>
+<li>完全 DIY 制作：<strong>¥ 1000 - ¥ 2000</strong>；</li>
+</ul>
+<p>大家的目标不同，有的是想快速体验 Cosplay，有的倾向于体验 DIY 制作。</p>
+<p>除此之外，还可以选购 “Kigurumi 专用打底衣” 或 “Kigurumi 肤色紧身衣”，这是一种皮肤色的紧身衣，由于人体肤色和 Kigurumi 面具的肤色不一致，所以需要穿上这种紧身衣，以便于 Kigurumi 的面具和紧身衣的过渡更加自然。一般价格在 ¥300 - ¥500 元不等。</p>
+<h2 id="专业工坊"><a class="header" href="#专业工坊">专业工坊</a></h2>
+<p>专业工坊是指专业制作 Kigurumi 的工作室，他们通常会提供一站式服务，包括头壳、紧身衣、假发、眼镜、鞋子等。这些工坊通常会有自己的设计师、制作师、销售人员，他们会根据客户的需求提供定制服务。</p>
+<p>可以通过社区专业的测评内容来了解主流工坊的产品、服务、质量、交付周期等信息，了解工坊的口碑。例如：</p>
+<ul>
+<li><a href="https://www.bilibili.com/read/cv35707159">B 站：kigurumi 店铺合集---仅文字版 https://www.bilibili.com/read/cv35707159 </a></li>
+<li><a href="https://www.bilibili.com/read/cv33331306">B 站：KIGURUMI⑦ 咕噜米入坑装备购买浅略指南 https://www.bilibili.com/read/cv33331306</a></li>
+<li><a href="https://tieba.baidu.com/p/9120197023">贴吧：kigurumi 店铺合集 https://tieba.baidu.com/p/9120197023</a></li>
+</ul>
+<p>也有很多专业做 Kigurumi 制作者店铺评测列表的网站：</p>
+<ul>
+<li><a href="https://kigudb.info/zh"><strong>kigudb.info</strong> - KiguDB 收录了许多玩家作品，同时也收录作品的工坊的信息</a></li>
+<li><a href="https://makers.kig-o.com/"><strong>makers.kig-o.com</strong> - Kigurumi Mask Makers（英文）由 Celes Halcyon 维护的网站，上面记录了工坊作者信息</a></li>
+<li><a href="https://kigguide.com/"><strong>kigguide.com</strong>（英文）kigguide - 一个致力于 Kigurumi 亚文化的小网站</a></li>
+<li><a href="https://kigurumi-animegao.fr/"><strong>kigurumi-animegao.fr</strong> - 由 Odd_HD 与 Schizu_Emyu 合作托管和开发，旨在汇总与 kigurumi 爱好相关的信息</a></li>
+</ul>
+<p><img src="./img/screenshot_01.jpg" alt="社区内容截图" /></p>
+<blockquote>
+<p>如果预算充足，并且目标明确在 “我更想要体验 Cosplay”、“拍摄摄影作品”、“参加展会” 等情况下，建议选择专业工坊定制。制作加工的工期、进展比较充满确定性，可以更好的控制预算，品质有保障。</p>
+</blockquote>
+<h2 id="diy"><a class="header" href="#diy">DIY</a></h2>
+<p>DIY 是指 Do It Yourself，即自己动手制作。</p>
+<p>工坊店家有时候不会承接所有的角色定制委托，他们会根据实际生产情况放弃一些顾客的需求。目前有很多玩家选择 DIY 制作 Kigurumi，这样可以更好的体验到制作的乐趣，也可以根据自己的需求、喜好来定制 Kigurumi。</p>
+<p>Kigurumi 的主体部分能够通过 DIY 来完成的部分：</p>
+<ol>
+<li>壳体：3D 设计、制造、喷漆（也有很多不局限于 3D 打印 的方式）；</li>
+<li>假发：拆分、拼接、修剪、造型；</li>
+<li>壳面妆造：眼睛、眼妆、眼影腮红等面部细节；</li>
+</ol>
+<p>在 DIY 方面也有很多玩家分享了自己的经验、技巧、心得。可以通过社区、论坛、博客、视频等方式获取 DIY 制作 Kigurumi 的相关信息。</p>
+<p><img src="./img/screenshot_02.jpg" alt="社区内容截图" /></p>
+<blockquote>
+<p>本章节仅简单介绍了一些 DIY 制作 Kigurumi 的过程，在 DIY 过程中会涉及五官比例等美术知识，也会涉及到一些化妆、喷漆等技巧，建议在 DIY 之前先了解一些相关的知识。具体的 DIY 制作流程、技巧、注意事项等内容将在后续章节中详细介绍。</p>
+</blockquote>
+<p>壳体部分的制作，可以通过 3D 建模工具（如：Blender、Zbrush）建模、3D 打印、喷漆等方式来完成，同时在二手交易市场上也能获取到一些半成品的壳体，或者通过网络上的开源模型来获取壳体后 3D 打印。</p>
+<p>假发部分的制作，可以通过购买传统的 Cosplay 假发、修剪、拼接、造型等方式来完成。拼接的过程可以自制假发发网，也可以直接通过热熔胶粘连到壳体上，符合基本的头发朝向、长度即可后续造型。同时也可以寻找在 Cosplay 社群中，提供专业造型服务的玩家，委托他们来完成假发的造型。</p>
+<p>壳面妆造部分的制作，可以通过丙烯、模型水贴、薄 EVA 完成基本妆造，使用彩铅辅助，色粉实现腮红、眼影等效果，消光清漆定妆。</p>
+<h2 id="二手交易"><a class="header" href="#二手交易">二手交易</a></h2>
+<p>在一些二手交易平台、社区、论坛上，也有一些玩家会出售自己的 Kigurumi 产品，这些产品可能是自己不再使用、不再喜欢的角色，也可能是自己 DIY 制作的产品。这种方式相对来说比较便宜，适合具有丰富经验的玩家。如果您满足下面的条件，可以考虑通过二手交易的方式获取 Kigurumi：</p>
+<ol>
+<li>了解二手交易市场、交易规则、交易风险；</li>
+<li>了解 Kigurumi 的店家、品质、价格；</li>
+<li>DIY 经验丰富，能够对二手产品进行改造、维护；</li>
+<li>有一定的经济实力、时间、经历，能够承担一定的风险；</li>
+<li>有一定的社区、论坛、博客、视频等资源，能够获取到二手交易信息；</li>
+<li>有一定的社交能力，能够与卖家、买家进行有效的沟通、交流；</li>
+</ol>
+<blockquote>
+<p>任何二手市场产品价格取决于产品的流动性、供需关系等关键因素。</p>
+</blockquote>
+<p>Kigurumi 的独特之处在于：“交付前存在较大不确定性，而交付后却有很高的确定性。”</p>
+<p>作为一个小众市场，一旦某个角色成功交付并效果理想，往往会吸引更多关注和需求，促进二手市场的活跃。然而，二手价格的“保值”仍存在不确定性————越来越多新用户的加入和新店家的出现，热门角色的需求增加、热门角色的保有量也正在增长，随着时间发展店家的交付确定性也随之增强，这将对二手市场的产品价格产生冲击。当然未来也会有“奢侈品级”的店家出现，该类型的产品资产价值支撑的确定性较好。<strong>不过不建议将 Kigurumi 视为投资品，因为其价值的确定性较低</strong>。</p>
+<p>另外，对于目标是 “改造成新角色” 的玩家而言，只需关注产品的质量和改造成本即可，不必过于关注产品的颜值，也许通过自己的改造，能够让产品焕发新的生机。</p>
+<h2 id="总结"><a class="header" href="#总结">总结</a></h2>
+<p>本章节通过专业工坊、DIY、二手交易三种方式介绍了获取 Kigurumi 的途径，每种方式都有其适用的场景、适用的人群。在选择获取 Kigurumi 的方式时，需要根据自己的需求、经济实力、经验、时间、社交能力等因素来综合考虑。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../01_HelloKigurumi/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../03_StoreChallenge/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../01_HelloKigurumi/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../03_StoreChallenge/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
